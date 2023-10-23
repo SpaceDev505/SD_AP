@@ -5,7 +5,7 @@ import base64
 import requests
 
 # A1111 URL
-url = "https://020782446eeda6cd1a.gradio.live"
+url = "https://db19289ab29abb4f96.gradio.live"
 
 # Read Image in RGB order
 img = cv2.imread('apple.png')
@@ -28,18 +28,18 @@ payload = {
     ],
     "mask": encoded_baseimage,
     "batch_size": 1,
-    "cfg_scale": 7,
-    "resize_mode": 0,
+    "cfg_scale": 23,
+    "resize_mode": 2,
+    "inpainting_mask_invert": 1,
     "inpainting_fill":1,
-    "inpainting_mask_invert": 0,
     "inpaint_full_res": 0,
+    "refiner_checkpoint": "v1-5-pruned-emaonly.safetensors [6ce0161689]",
     "prompt": 'an orange',
     "negative_prompt": "",
     "width": 512,
     "height": 512,
     "steps": 20,
     "sampler_index": "DPM++ 2M Karras",
-
 
 }
 
